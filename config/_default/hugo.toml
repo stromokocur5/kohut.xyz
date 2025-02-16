@@ -32,6 +32,87 @@ lastName = "Kohut"
     link = "https://www.github.com/stromokocur5"
     icon = "github"
 
+    
+[[params.skills.architecture]]
+    name = "API Management Platforms"
+    icon = "terminal"
+
+[[params.skills.architecture]]
+    name = "DevOps"
+    icon = "terminal"
+
+[[params.skills.architecture]]
+    name = "DNS"
+    icon = "terminal"
+
+[[params.skills.architecture]]
+    name = "Firewalls"
+    icon = "terminal"
+
+[[params.skills.architecture]]
+    name = "Microservices"
+    icon = "terminal"
+
+[[params.skills.architecture]]
+    name = "REST"
+    icon = "terminal"
+
+[[params.skills.architecture]]
+    name = "Webservices"
+    icon = "terminal"
+
+[[params.skills.languages]]
+    name = "Rust"
+    icon = "rust"
+
+[[params.skills.languages]]
+    name = "Go"
+    icon = "go"
+
+[[params.skills.languages]]
+    name = "Typescript"
+    icon = "typescript"
+
+[[params.skills.languages]]
+    name = "Git"
+    icon = "git"
+
+[[params.skills.languages]]
+    name = "Shell"
+    icon = "terminal"
+
+[[params.skills.languages]]
+    name = "Linux"
+    icon = "linux"
+
+[[params.skills.cloud]]
+    name = "Docker"
+    icon = "docker"
+
+[[params.skills.cloud]]
+    name = "AWS"
+    icon = "aws"
+
+[[params.skills.cloud]]
+    name = "Nginx"
+    icon = "nginx"
+
+[[params.skills.cloud]]
+    name = "Terraform"
+    icon = "terminal"
+
+[[params.skills.cloud]]
+    name = "Cloudflare"
+    icon = "cloudflare"
+
+
+[[params.education]]
+    name = "Stredná odborná škola techniky a služieb, Kollárova 17, Sečovce"
+    field = "Information and Communication Technology"
+    start = 2022
+    end = 2026
+
+
 [menus]
   [[menus.main]]
     name = 'About'
@@ -42,16 +123,14 @@ lastName = "Kohut"
     pageRef = '#skills'
     weight = 2
   [[menus.main]]
+    name = 'Education'
+    pageRef = '#education'
+    weight = 3
+  [[menus.main]]
     name = 'Creations'
     pageRef = '#creations'
-    weight = 3
+    weight = 4
   [[menus.main]]
     name = 'Experience'
     pageRef = '#experience'
-    weight = 4
-  [[menus.main]]
-    name = 'Education'
-    pageRef = '#education'
     weight = 5
-
-

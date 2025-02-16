@@ -16,15 +16,65 @@
   </div>
 </section>
 <section class="min-h-screen flex flex-col lg:items-start items-center justify-center lg:p-8 border-b" id="skills">
-  <h2 class="text-6xl text-neutral mb-4">Nothing here yet</h2>
-</section>
-<section class="min-h-screen flex flex-col lg:items-start items-center justify-center lg:p-8 border-b" id="creations">
-  <h2 class="text-6xl text-neutral mb-4">Nothing here yet</h2>
-</section>
-<section class="min-h-screen flex flex-col lg:items-start items-center justify-center lg:p-8 border-b" id="experience">
-  <h2 class="text-6xl text-neutral mb-4">Nothing here yet</h2>
+  <h2 class="text-6xl text-neutral mb-4">skills</h2>
+  {{$architecture := .Site.Params.skills.architecture }}
+  {{$languages := .Site.Params.skills.languages }}
+  {{$cloud := .Site.Params.skills.cloud }}
+
+  <h3 class="text-4xl text-base-content my-4">
+    architecture & concepts
+  </h3>
+  <ul class="text-2xl">
+    {{range $architecture}}
+    <li class="flex flex-row gap-x-2 justify-between lg:justify-start">
+      <img height="24" width="24" src={{printf "/%s.svg" .icon }} />
+      {{.name}}
+    </li>
+    {{end}}
+  </ul>
+
+  <h3 class="text-4xl text-base-content my-4">
+    languages, operating systems & dev tools
+  </h3>
+  <ul class="text-2xl">
+    {{range $languages}}
+    <li class="flex flex-row gap-x-2 justify-between lg:justify-start">
+      <img height="24" width="24" src={{printf "/%s.svg" .icon }} />
+      {{.name}}
+    </li>
+    {{end}}
+  </ul>
+
+  <h3 class="text-4xl text-base-content my-4">
+    platform, container & cloud administration
+  </h3>
+  <ul class="text-2xl">
+    {{range $cloud}}
+    <li class="flex flex-row gap-x-2 justify-between lg:justify-start">
+      <img height="24" width="24" src={{printf "/%s.svg" .icon }} />
+      {{.name}}
+    </li>
+    {{end}}
+  </ul>
 </section>
 <section class="min-h-screen flex flex-col lg:items-start items-center justify-center lg:p-8 border-b" id="education">
-  <h2 class="text-6xl text-neutral mb-4">Nothing here yet</h2>
+  <h2 class="text-6xl text-neutral mb-4">education</h2>
+  <ul class="w-full">
+    {{range .Site.Params.education}}
+    <li class="flex flex-col lg:flex-row items-center justify-center lg:justify-between">
+      <div class="max-w-160">
+        <h3 class="text-4xl">{{.name}}</h3>
+        <h4 class="text-3xl">{{.field}}</h4>
+      </div>
+      <h4 class="text-2xl font-bold">{{.start}}-{{.end}}</h4>
+    </li>
+    {{end}}
+  </ul>
+</section>
+<section class="min-h-screen flex flex-col lg:items-start items-center justify-center lg:p-8 border-b" id="creations">
+  <h2 class="text-6xl text-neutral mb-4">creations</h2>
+</section>
+<section class="min-h-screen flex flex-col lg:items-start items-center justify-center lg:p-8 border-b" id="experience">
+  <h2 class="text-6xl text-neutral mb-4">experience</h2>
 </section>
 {{end}}
