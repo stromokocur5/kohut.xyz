@@ -1,10 +1,10 @@
 {{define "main" }}
 <section class="min-h-screen flex flex-col lg:items-start items-center justify-center lg:p-8 border-b" id="about">
-  <h1 class="text-7xl text-neutral mb-4">{{upper .Site.Params.firstName}} <span class="text-base-content">{{upper
+  <h1 class="text-7xl text-neutral mb-4">{{.Site.Params.firstName}} <span class="text-base-content">{{
       .Site.Params.lastName}}</span>
   </h1>
-  <a class="text-2xl text-base-content hover:text-warning uppercase transition" {{printf "href=mailto:%s"
-    .Site.Params.email | safeHTMLAttr}}>{{
+  <a class="text-2xl text-base-content hover:text-warning transition" {{printf "href=mailto:%s" .Site.Params.email |
+    safeHTMLAttr}}>{{
     .Site.Params.email}}</a>
   <div class="mt-8 flex flex-row gap-x-4 sm:gap-x-8">
     {{range site.Params.handles}}
