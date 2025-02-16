@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "$npm_execpath run build:css && hugo",
+    "build:css": "tailwindcss -i app.css -o assets/style.css"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.0-beta.9",
+    "daisyui": "^5.0.0-beta.1",
+    "tailwindcss": "^4.0.0-beta.9"
+  }
+}
