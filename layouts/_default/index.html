@@ -6,9 +6,9 @@
   <a class="text-2xl text-base-content hover:text-warning transition" {{printf "href=mailto:%s" .Site.Params.email |
     safeHTMLAttr}}>{{
     .Site.Params.email}}</a>
-  <div class="mt-8 flex flex-row gap-x-4 sm:gap-x-8">
+  <div class="mt-8 flex flex-row gap-x-6 sm:gap-x-8">
     {{range site.Params.handles}}
-    <a target="_blank" class="btn w-10 h-10 sm:w-14 sm:h-14 btn-square btn-base-100" href={{.link}}>
+    <a target="_blank" class="btn w-12 h-12 sm:w-14 sm:h-14 btn-square btn-base-100" href={{.link}}>
       <img height="32" width="32" src={{printf "/%s.svg" .icon}}>
       </img>
     </a>
