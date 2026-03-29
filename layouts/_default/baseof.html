@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}gabriel kohut | weby &amp; dizajn pre lokálny biznis{{ else }}{{ .Title }} | gabriel kohut{{
+        end }}</title>
+    <meta name="description"
+        content="kompletné weby &amp; brand identita pre lokálny biznis. od loga, cez texty, až po spustenie rýchleho webu.">
+
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@900,800,700,500,400&display=swap" rel="stylesheet">
+
+    {{ $css := resources.Get "style.css" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+</head>
+
+<body class="p-4 lg:p-8 font-sans antialiased text-base lg:text-lg leading-relaxed max-w-[90rem] mx-auto">
+
+    {{ block "main" . }}{{ end }}
+
+    <footer class="mt-8 pt-6 pb-2 border-t-2 border-dark flex justify-center items-center text-sm font-semibold">
+        <span>&copy; {{ now.Format "2006" }} gabriel kohut</span>
+    </footer>
+
+</body>
+
+</html>

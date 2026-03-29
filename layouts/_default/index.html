@@ -1,2 +1,182 @@
 {{ define "main" }}
+
+<header
+    class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 gap-4 border-b-2 border-dark pb-6">
+    <div>
+        <h1 class="text-4xl font-black tracking-tight leading-none mb-1">gabriel kohut.</h1>
+        <p class="font-bold text-sm uppercase tracking-widest opacity-70 text-sunset">kompletné weby &amp; brand
+            identita</p>
+    </div>
+    <div class="flex flex-wrap items-center gap-4 text-xs font-bold uppercase tracking-widest">
+        <div class="flex items-center gap-2 border border-dark px-3 py-1.5 rounded-full">
+            <div class="w-2 h-2 bg-sunset rounded-full animate-pulse"></div>
+            <span>kapacity pre nové projekty: otvorené</span>
+        </div>
+        <a href="mailto:gabriel@kohut.xyz"
+            class="group bg-dark text-shalimar px-4 py-1.5 rounded-full hover:bg-sunset transition-colors">
+            gabriel@kohut.xyz <span
+                class="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+        </a>
+    </div>
+</header>
+
+<main class="grid grid-cols-1 lg:grid-cols-12 gap-5 auto-rows-min">
+
+    {{/* Hero */}}
+    <div class="bento-card col-span-1 lg:col-span-8 p-8 lg:p-12 flex flex-col justify-between">
+        <h2 class="text-5xl lg:text-7xl font-black tracking-tighter leading-[1] mb-8">
+            vy sa starajte o svojich zákazníkov.<br>
+            <span class="text-sunset">ja sa postarám o váš web a vizuál.</span>
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
+            <p class="font-medium text-xl opacity-80 leading-snug">
+                pomáham lokálnym podnikom, kaviarňam a barberom vyzerať na internete profesionálne. od vytvorenia loga,
+                cez
+                napísanie textov, až po spustenie rýchleho webu. všetko bez stresu a technického žargónu.
+            </p>
+        </div>
+    </div>
+
+    {{/* CTA */}}
+    <div class="bento-card bento-dark col-span-1 lg:col-span-4 p-8 lg:p-12 flex flex-col justify-between">
+        <div>
+            <span class="text-sm font-bold uppercase tracking-widest opacity-50 mb-4 block">ako začať?</span>
+            <h3 class="text-4xl font-black mb-4 text-sunset leading-tight">poďme si o tom napísať.</h3>
+            <p class="font-medium opacity-80 mb-8 text-lg">
+                pošlite mi krátky e-mail s tým, čo robíte. do 24 hodín vám pošlem návrh, ako by sme to vedeli vylepšiť a
+                koľko
+                by to stálo. nezáväzne.
+            </p>
+        </div>
+        <a href="mailto:gabriel@kohut.xyz"
+            class="w-full bg-sunset text-dark text-center font-black uppercase tracking-widest py-4 px-2 rounded-full hover:bg-shalimar transition-all transform hover:scale-[1.02]">
+            napísať e-mail
+        </a>
+    </div>
+
+    {{/* Čo dostanete */}}
+    <div class="bento-card col-span-1 lg:col-span-5 p-8 lg:p-10">
+        <h3 class="text-2xl font-black border-b-2 border-dark pb-3 mb-5">čo od mňa dostanete k webu?</h3>
+        <p class="text-base font-medium opacity-80 mb-6">nerobím len "holé stránky". odovzdám vám funkčný nástroj pre
+            váš
+            biznis. v cene webu je automaticky zahrnuté:</p>
+        <ul class="check-list text-base font-bold opacity-90 space-y-2">
+            <li>firemný e-mail (napr. info@vasafirma.sk)</li>
+            <li>napojenie na google mapy a recenzie</li>
+            <li>možnosť upraviť si otváracie hodiny alebo cenník sami z mobilu</li>
+            <li>profesionálne napísané texty (ai copywriting)</li>
+            <li>základné seo (aby vás ľudia našli na googli)</li>
+            <li>prepojenie na váš instagram / rezervačný systém</li>
+        </ul>
+    </div>
+
+    {{/* Poplatky */}}
+    <div class="bento-card col-span-1 lg:col-span-4 p-8 lg:p-10 bg-sunset/10 border-none">
+        <h3 class="text-2xl font-black border-b-2 border-dark pb-3 mb-5">transparentné poplatky</h3>
+        <div class="space-y-5 text-base font-medium opacity-90">
+            <p><strong class="font-black block text-lg mb-1 text-sunset">1. jednorazová platba mne:</strong> platíte len
+                raz
+                za dizajn a
+                naprogramovanie webu (od 500 € do 1500 € podľa veľkosti).</p>
+            <p><strong class="font-black block text-lg mb-1 text-sunset">2. ročné poplatky za prevádzku:</strong> aby
+                web
+                fungoval,
+                potrebuje adresu (doménu) a miesto na serveri (hosting). toto stojí <strong>cca 30 až 50 €
+                    ročne</strong>.
+                platí sa to priamo poskytovateľovi, ale všetko vám technicky nastavím a vybavím ja.</p>
+        </div>
+    </div>
+
+    {{/* Čo budem potrebovať */}}
+    <div class="bento-card col-span-1 lg:col-span-3 p-8 lg:p-10 border-dashed border-4 border-dark/40">
+        <h3 class="text-2xl font-black border-b-2 border-dark pb-3 mb-5">čo budem potrebovať od vás?</h3>
+        <p class="text-base font-medium opacity-80 mb-5">chápem, že máte plné ruky práce. preto odo mňa nečakajte
+            zložité
+            zadania. stačí mi:</p>
+        <ol class="text-base font-bold space-y-4 opacity-90 list-decimal list-inside marker:text-sunset">
+            <li><span class="opacity-90">1 krátky hovor (zistím, čo robíte)</span></li>
+            <li><span class="opacity-90">váš aktuálny cenník / menu lístok</span></li>
+            <li><span class="opacity-90">pár fotiek prevádzky z mobilu</span></li>
+            <li><span class="opacity-90">vaše logo (ak nemáte, vytvorím ho)</span></li>
+        </ol>
+        <p class="text-sm font-black mt-6 text-sunset">o zvyšok sa postarám ja.</p>
+    </div>
+
+    {{/* Služby */}}
+    <div class="bento-card col-span-1 lg:col-span-12 p-8 lg:p-10">
+        <h3 class="text-3xl font-black mb-8">moje služby</h3>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div
+                class="border-2 border-dark rounded-2xl p-6 lg:p-8 hover:bg-dark hover:text-shalimar transition-colors group cursor-default">
+                <h4 class="font-black text-2xl mb-2 group-hover:text-sunset transition-colors">kompletný web</h4>
+                <span
+                    class="text-xs font-bold uppercase border border-current px-2 py-1 rounded-full inline-block mb-4">od
+                    500 €
+                    do 1500 €</span>
+                <p class="text-base font-medium opacity-80 mb-4 group-hover:opacity-100">prezentačný web s moderným
+                    dizajnom,
+                    rýchlym načítaním a
+                    napojením na vaše siete a mapy. navrhnutý tak, aby vám prinášal zákazníkov.</p>
+            </div>
+            <div
+                class="border-2 border-dark rounded-2xl p-6 lg:p-8 hover:bg-dark hover:text-shalimar transition-colors group cursor-default">
+                <h4 class="font-black text-2xl mb-2 group-hover:text-sunset transition-colors">identita a dizajn</h4>
+                <span
+                    class="text-xs font-bold uppercase border border-current px-2 py-1 rounded-full inline-block mb-4">od
+                    300
+                    €</span>
+                <p class="text-base font-medium opacity-80 mb-4 group-hover:opacity-100">zakladáte niečo nové? navrhnem
+                    vám
+                    logo, vyberiem farby,
+                    pripravím dizajn pre tlač (menu, letáky, nápojové lístky) a ujednotím váš vizuál.</p>
+            </div>
+            <div
+                class="border-2 border-dark rounded-2xl p-6 lg:p-8 hover:bg-dark hover:text-shalimar transition-colors group cursor-default">
+                <h4 class="font-black text-2xl mb-2 group-hover:text-sunset transition-colors">správa sietí (mikro)</h4>
+                <span
+                    class="text-xs font-bold uppercase border border-current px-2 py-1 rounded-full inline-block mb-4">jednorazovo
+                    od
+                    15 €</span>
+                <p class="text-base font-medium opacity-80 mb-4 group-hover:opacity-100">nestíhate postovať na
+                    instagram?
+                    vytvorím vám vizuálne pekné
+                    carousely, príspevky a pomôžem s pútavým textom pre vašich sledovateľov.</p>
+            </div>
+        </div>
+    </div>
+
+    {{/* Portfólio */}}
+    <div class="bento-card col-span-1 lg:col-span-12 p-0 flex flex-col lg:flex-row overflow-hidden">
+        <div class="p-8 lg:p-10 lg:w-1/2 flex flex-col justify-center border-b lg:border-b-0 lg:border-r-2 border-dark">
+            <span class="text-sm font-bold uppercase tracking-widest text-sunset mb-2 block">reálny projekt</span>
+            <h3 class="text-3xl font-black mb-3">archa pub</h3>
+            <p class="text-lg font-medium opacity-80 mb-8">
+                gastro prevádzka potrebovala zmodernizovať obraz na internete. zákazníci teraz okamžite zistia, čo je v
+                ponuke, kedy je otvorené a ako si rezervovať stôl.
+            </p>
+            <a href="https://archapub.sk" target="_blank"
+                class="group text-sm font-bold uppercase tracking-widest bg-dark text-shalimar text-center py-4 rounded-full hover:bg-sunset transition-colors w-max px-8">
+                pozrieť web <span
+                    class="inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+            </a>
+        </div>
+        <div class="p-8 lg:p-10 lg:w-1/2 flex flex-col justify-center bg-sunset/10">
+            <span class="text-sm font-bold uppercase tracking-widest text-sunset mb-2 block">reálny projekt</span>
+            <h3 class="text-3xl font-black mb-3">mnz.sk</h3>
+            <p class="text-lg font-medium opacity-80 mb-8">
+                oficiálna stránka pre organizáciu. dôraz bol kladený na to, aby boli informácie prehľadné pre všetky
+                vekové
+                kategórie a aby web pôsobil seriózne.
+            </p>
+            <a href="https://mnz.sk" target="_blank"
+                class="group text-sm font-bold uppercase tracking-widest bg-dark text-shalimar text-center py-4 rounded-full hover:bg-sunset transition-colors w-max px-8">
+                pozrieť web <span
+                    class="inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+            </a>
+        </div>
+    </div>
+
+</main>
+
 {{ end }}

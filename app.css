@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+    --color-sunset: #ff553b;
+    --color-shalimar: #fff9bf;
+    --color-dark: #1a1a1a;
+
+    --font-sans: "Cabinet Grotesk", sans-serif;
+}
+
+/* Base */
+body {
+    background-color: var(--color-shalimar);
+    color: var(--color-dark);
+}
+
+/* Bento Cards */
+.bento-card {
+    border: 2px solid var(--color-dark);
+    background-color: var(--color-shalimar);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.bento-card:hover {
+    box-shadow: 6px 6px 0px 0px var(--color-sunset);
+    transform: translate(-2px, -2px);
+}
+
+.bento-dark {
+    background-color: var(--color-dark);
+    color: var(--color-shalimar);
+    border-color: var(--color-dark);
+}
+
+.bento-dark:hover {
+    box-shadow: 6px 6px 0px 0px var(--color-sunset);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-shalimar);
+    border-left: 1px solid var(--color-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-dark);
+    border-radius: 10px;
+}
+
+/* Check List */
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.check-list li::before {
+    content: "[+]";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 900;
+    color: var(--color-sunset);
+}
+
+/* Selection */
+::selection {
+    background-color: var(--color-sunset);
+    color: var(--color-shalimar);
+}
+
+.bento-dark ::selection,
+.bg-sunset\/10 ::selection {
+    background-color: var(--color-shalimar);
+    color: var(--color-dark);
+}
