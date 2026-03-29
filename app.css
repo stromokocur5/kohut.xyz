@@ -84,6 +84,79 @@ body {
     color: var(--color-dark);
 }
 
+/* Service Cards */
+.service-card {
+    border: 2px solid var(--color-dark);
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    background-color: var(--color-shalimar);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.service-card .service-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.service-card .service-summary::-webkit-details-marker {
+    display: none;
+}
+
+.service-toggle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-sunset);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.service-card[open] .service-toggle {
+    transform: rotate(45deg);
+}
+
+.service-desc {
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.8;
+    line-height: 1.6;
+    padding-top: 1rem;
+}
+
+/* Mobile: tap to open/darken */
+.service-card[open] {
+    background-color: var(--color-dark);
+    color: var(--color-shalimar);
+    border-color: var(--color-dark);
+}
+
+.service-card[open] h4 {
+    color: var(--color-sunset);
+}
+
+/* Desktop: always show desc, hover to darken */
+@media (min-width: 1024px) {
+    .service-card {
+        cursor: default;
+    }
+
+    .service-card .service-desc {
+        display: block !important;
+    }
+
+    .service-card:hover {
+        background-color: var(--color-dark);
+        color: var(--color-shalimar);
+        border-color: var(--color-dark);
+    }
+
+    .service-card:hover h4 {
+        color: var(--color-sunset);
+    }
+}
+
 /* Process Cards */
 .process-card {
     border: 2px solid var(--color-dark);
