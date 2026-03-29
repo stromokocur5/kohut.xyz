@@ -147,56 +147,69 @@
     </div>
 
     {{/* Ako to prebieha */}}
-    <div class="bento-card col-span-1 lg:col-span-12 p-8 lg:p-10">
-        <h3 class="text-3xl font-black mb-3">ako to prebieha?</h3>
-        <p class="text-base font-medium opacity-70 mb-10">od prvého e-mailu po hotový web za 2–4 týždne. žiadna
-            byrokracia, žiadne komplikácie.</p>
+    <div class="col-span-1 lg:col-span-12">
+        <div class="mb-8">
+            <span class="text-sm font-bold uppercase tracking-widest text-sunset mb-2 block">jednoduchý proces</span>
+            <h3 class="text-4xl lg:text-5xl font-black tracking-tight">ako to prebieha?</h3>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
-            <div class="process-step relative p-6 lg:p-8">
-                <div
-                    class="w-12 h-12 bg-sunset text-shalimar rounded-full flex items-center justify-center font-black text-xl mb-5">
-                    1</div>
-                <h4 class="font-black text-xl mb-2">napíšete mi e-mail</h4>
-                <p class="text-sm font-medium opacity-70">stačí napísať, čo robíte a čo potrebujete. nemusí to byť
-                    žiadne zadanie — stačí pár viet.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="process-card group">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="process-number">01</div>
+                    <span class="text-xs font-bold uppercase tracking-widest opacity-40">krok</span>
+                </div>
+                <h4 class="font-black text-xl mb-3 group-hover:text-sunset transition-colors">napíšete mi e-mail</h4>
+                <p class="text-sm font-medium opacity-60 leading-relaxed">stačí napísať, čo robíte a čo potrebujete.
+                    nemusí to byť žiadne zadanie — stačí pár viet.</p>
+                <div class="process-arrow">→</div>
             </div>
-            <div class="process-step relative p-6 lg:p-8">
-                <div
-                    class="w-12 h-12 bg-sunset text-shalimar rounded-full flex items-center justify-center font-black text-xl mb-5">
-                    2</div>
-                <h4 class="font-black text-xl mb-2">krátky hovor</h4>
-                <p class="text-sm font-medium opacity-70">ozvem sa vám do 24 hodín. v 15-minútovom hovore si
-                    ujasníme, čo presne potrebujete a koľko to bude stáť.</p>
+            <div class="process-card group">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="process-number">02</div>
+                    <span class="text-xs font-bold uppercase tracking-widest opacity-40">krok</span>
+                </div>
+                <h4 class="font-black text-xl mb-3 group-hover:text-sunset transition-colors">krátky hovor</h4>
+                <p class="text-sm font-medium opacity-60 leading-relaxed">ozvem sa vám do 24 hodín. v 15-minútovom
+                    hovore si ujasníme, čo presne potrebujete a koľko to bude stáť.</p>
+                <div class="process-arrow">→</div>
             </div>
-            <div class="process-step relative p-6 lg:p-8">
-                <div
-                    class="w-12 h-12 bg-sunset text-shalimar rounded-full flex items-center justify-center font-black text-xl mb-5">
-                    3</div>
-                <h4 class="font-black text-xl mb-2">návrh dizajnu</h4>
-                <p class="text-sm font-medium opacity-70">do pár dní dostanete prvý návrh. ukážem vám, ako bude web
-                    vyzerať. zapracujem vaše pripomienky.</p>
+            <div class="process-card group">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="process-number">03</div>
+                    <span class="text-xs font-bold uppercase tracking-widest opacity-40">krok</span>
+                </div>
+                <h4 class="font-black text-xl mb-3 group-hover:text-sunset transition-colors">návrh dizajnu</h4>
+                <p class="text-sm font-medium opacity-60 leading-relaxed">do pár dní dostanete prvý návrh. ukážem vám,
+                    ako bude web vyzerať. zapracujem vaše pripomienky.</p>
+                <div class="process-arrow">→</div>
             </div>
-            <div class="process-step relative p-6 lg:p-8 process-step-last">
-                <div
-                    class="w-12 h-12 bg-dark text-shalimar rounded-full flex items-center justify-center font-black text-xl mb-5">
-                    ✓</div>
-                <h4 class="font-black text-xl mb-2">spustenie webu</h4>
-                <p class="text-sm font-medium opacity-70">web ide live. nastavím vám doménu, e-mail, analytics a
-                    všetko čo treba. vy len zdieľate odkaz.</p>
+            <div class="process-card process-card-final group">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="process-number process-number-final">✓</div>
+                    <span class="text-xs font-bold uppercase tracking-widest opacity-60">hotovo</span>
+                </div>
+                <h4 class="font-black text-xl mb-3 group-hover:text-shalimar transition-colors">spustenie webu</h4>
+                <p class="text-sm font-medium opacity-70 leading-relaxed">web ide live. nastavím vám doménu, e-mail,
+                    analytics a všetko čo treba. vy len zdieľate odkaz.</p>
             </div>
         </div>
     </div>
 
     {{/* FAQ */}}
-    <div class="bento-card bento-dark col-span-1 lg:col-span-12 p-8 lg:p-10">
-        <h3 class="text-3xl font-black mb-3 text-sunset">časté otázky</h3>
-        <p class="text-base font-medium opacity-50 mb-8">odpovede na to, čo sa ma ľudia najčastejšie pýtajú.</p>
+    <div class="col-span-1 lg:col-span-12">
+        <div class="mb-8">
+            <span class="text-sm font-bold uppercase tracking-widest text-sunset mb-2 block">otázky & odpovede</span>
+            <h3 class="text-4xl lg:text-5xl font-black tracking-tight">časté otázky</h3>
+        </div>
 
-        <div class="space-y-0">
-            <details class="faq-item group">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <details class="faq-card group">
                 <summary class="faq-summary">
-                    <span>koľko trvá vytvorenie webu?</span>
+                    <div class="flex items-start gap-4">
+                        <span class="faq-number">01</span>
+                        <span>koľko trvá vytvorenie webu?</span>
+                    </div>
                     <span class="faq-icon">+</span>
                 </summary>
                 <div class="faq-answer">
@@ -205,9 +218,12 @@
                 </div>
             </details>
 
-            <details class="faq-item group">
+            <details class="faq-card group">
                 <summary class="faq-summary">
-                    <span>budem si vedieť web upravovať sám?</span>
+                    <div class="flex items-start gap-4">
+                        <span class="faq-number">02</span>
+                        <span>budem si vedieť web upravovať sám?</span>
+                    </div>
                     <span class="faq-icon">+</span>
                 </summary>
                 <div class="faq-answer">
@@ -216,9 +232,12 @@
                 </div>
             </details>
 
-            <details class="faq-item group">
+            <details class="faq-card group">
                 <summary class="faq-summary">
-                    <span>čo ak budem chcieť niečo zmeniť po dokončení?</span>
+                    <div class="flex items-start gap-4">
+                        <span class="faq-number">03</span>
+                        <span>čo ak budem chcieť niečo zmeniť po dokončení?</span>
+                    </div>
                     <span class="faq-icon">+</span>
                 </summary>
                 <div class="faq-answer">
@@ -227,9 +246,12 @@
                 </div>
             </details>
 
-            <details class="faq-item group">
+            <details class="faq-card group">
                 <summary class="faq-summary">
-                    <span>musím vedieť niečo o technológiách?</span>
+                    <div class="flex items-start gap-4">
+                        <span class="faq-number">04</span>
+                        <span>musím vedieť niečo o technológiách?</span>
+                    </div>
                     <span class="faq-icon">+</span>
                 </summary>
                 <div class="faq-answer">
@@ -238,9 +260,12 @@
                 </div>
             </details>
 
-            <details class="faq-item group">
+            <details class="faq-card group">
                 <summary class="faq-summary">
-                    <span>prečo nie wordpress?</span>
+                    <div class="flex items-start gap-4">
+                        <span class="faq-number">05</span>
+                        <span>prečo nie wordpress?</span>
+                    </div>
                     <span class="faq-icon">+</span>
                 </summary>
                 <div class="faq-answer">
@@ -249,9 +274,12 @@
                 </div>
             </details>
 
-            <details class="faq-item group">
+            <details class="faq-card group">
                 <summary class="faq-summary">
-                    <span>ako to funguje s platbou?</span>
+                    <div class="flex items-start gap-4">
+                        <span class="faq-number">06</span>
+                        <span>ako to funguje s platbou?</span>
+                    </div>
                     <span class="faq-icon">+</span>
                 </summary>
                 <div class="faq-answer">
