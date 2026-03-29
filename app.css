@@ -212,21 +212,3 @@ details[open] .faq-icon {
     opacity: 0.75;
     line-height: 1.7;
 }
-
-/* Service Cards Mobile Toggle */
-.service-card {
-    -webkit-tap-highlight-color: transparent;
-}
-
-.service-card.is-active {
-    background-color: var(--color-dark) !important;
-    color: var(--color-shalimar) !important;
-}
-
-.service-card.is-active h4 {
-    color: var(--color-sunset) !important;
-}
-
-.service-card.is-active p {
-    opacity: 1 !important;
-}
