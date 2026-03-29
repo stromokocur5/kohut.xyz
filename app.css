@@ -15,28 +15,30 @@ body {
 }
 
 /* Bento Cards */
-.bento-card {
-    border: 2px solid var(--color-dark);
-    background-color: var(--color-shalimar);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    border-radius: 1.5rem;
-    overflow: hidden;
-}
+@layer components {
+    .bento-card {
+        border: 2px solid var(--color-dark);
+        background-color: var(--color-shalimar);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        border-radius: 1.5rem;
+        overflow: hidden;
+    }
 
-.bento-card:hover {
-    box-shadow: 6px 6px 0px 0px var(--color-sunset);
-    transform: translate(-2px, -2px);
-}
+    .bento-card:hover {
+        box-shadow: 6px 6px 0px 0px var(--color-sunset);
+        transform: translate(-2px, -2px);
+    }
 
-.bento-dark {
-    background-color: var(--color-dark);
-    color: var(--color-shalimar);
-    border-color: var(--color-dark);
-}
+    .bento-dark {
+        background-color: var(--color-dark);
+        color: var(--color-shalimar);
+        border-color: var(--color-dark);
+    }
 
-.bento-dark:hover {
-    box-shadow: 6px 6px 0px 0px var(--color-sunset);
+    .bento-dark:hover {
+        box-shadow: 6px 6px 0px 0px var(--color-sunset);
+    }
 }
 
 /* Scrollbar */
