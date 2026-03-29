@@ -113,7 +113,6 @@ body {
     font-weight: 900;
     color: var(--color-sunset);
     line-height: 1;
-    font-family: monospace;
 }
 
 .process-number-final {
@@ -187,7 +186,6 @@ body {
 }
 
 .faq-number {
-    font-family: monospace;
     font-weight: 900;
     font-size: 1.25rem;
     color: var(--color-sunset);
