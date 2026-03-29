@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitálny Pas | Názov Klienta</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@900,800,700,500,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {'sunset': '#ff553b', 'shalimar': '#fff9bf', 'dark': '#1a1a1a'},
+          fontFamily: {'sans': ['"Cabinet Grotesk"', 'sans-serif']}
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Nastavenie pre tlač do PDF */
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      .no-print {
+        display: none;
+      }
+    }
+
+    body {
+      background-color: #fff9bf;
+      color: #1a1a1a;
+    }
+
+    .a4-container {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background-color: #fff9bf;
+      padding: 20mm;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .bento-card {
+      border: 2px solid #1a1a1a;
+      border-radius: 1.5rem;
+      background-color: #fff9bf;
+      box-shadow: 4px 4px 0px 0px #ff553b;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased text-base leading-relaxed flex justify-center py-8">
+
+  <div class="a4-container shadow-2xl print:shadow-none">
+
+    <header class="border-b-4 border-dark pb-6 mb-8 flex justify-between items-end">
+      <div>
+        <span class="text-sunset font-bold uppercase tracking-widest text-sm block mb-2">oficiálny dokument</span>
+        <h1 class="text-5xl font-black tracking-tighter leading-none mb-1">digitálny pas.</h1>
+      </div>
+      <div class="text-right">
+        <p class="font-black text-xl">[NÁZOV KAVIARNE / BARBERA]</p>
+        <p class="font-bold opacity-70 text-sm">vystavené: DD. MM. RRRR</p>
+      </div>
+    </header>
+
+    <div class="mb-8">
+      <p class="font-medium text-lg opacity-90">
+        vitajte vo svojom novom digitálnom domove. o všetky technické záležitosti (server, doména, bezpečnosť) sa starám
+        ja na pozadí. vy tu máte kľúče od toho najdôležitejšieho. tento dokument si bezpečne uložte.
+      </p>
+    </div>
+
+    <div class="bento-card">
+      <div class="flex items-center gap-3 mb-4 border-b-2 border-dark/20 pb-3">
+        <div class="w-4 h-4 bg-sunset rounded-full"></div>
+        <h2 class="text-2xl font-black">správa webstránky</h2>
+      </div>
+      <p class="font-medium opacity-80 mb-4 text-sm">tu si môžete kedykoľvek upraviť texty, otváracie hodiny alebo
+        cenník.</p>
+
+      <div class="space-y-3">
+        <div class="flex justify-between border-b border-dark/10 pb-2">
+          <span class="font-bold opacity-70">prihlasovací link:</span>
+          <span class="font-black">vasadomena.sk/admin</span>
+        </div>
+        <div class="flex justify-between border-b border-dark/10 pb-2">
+          <span class="font-bold opacity-70">prihlasovacie meno:</span>
+          <span class="font-black">admin</span>
+        </div>
+        <div class="flex justify-between pb-2">
+          <span class="font-bold opacity-70">heslo:</span>
+          <span class="font-black text-sunset">[vygenerované_heslo]</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bento-card">
+      <div class="flex items-center gap-3 mb-4 border-b-2 border-dark/20 pb-3">
+        <div class="w-4 h-4 bg-dark rounded-full"></div>
+        <h2 class="text-2xl font-black">firemný e-mail</h2>
+      </div>
+      <p class="font-medium opacity-80 mb-4 text-sm">stiahnite si aplikáciu Zoho Mail do mobilu, alebo sa prihláste cez
+        prehliadač.</p>
+
+      <div class="space-y-3">
+        <div class="flex justify-between border-b border-dark/10 pb-2">
+          <span class="font-bold opacity-70">prihlásenie cez web:</span>
+          <span class="font-black">mail.zoho.eu</span>
+        </div>
+        <div class="flex justify-between border-b border-dark/10 pb-2">
+          <span class="font-bold opacity-70">váš nový e-mail:</span>
+          <span class="font-black">info@vasadomena.sk</span>
+        </div>
+        <div class="flex justify-between pb-2">
+          <span class="font-bold opacity-70">heslo:</span>
+          <span class="font-black text-sunset">[vygenerované_heslo]</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="mt-12 pt-6 border-t-2 border-dark text-center">
+      <p class="font-black uppercase tracking-widest text-sm mb-2">niečo nefunguje? stratili ste prístup?</p>
+      <p class="font-medium opacity-80">napíšte mi na <strong class="text-sunset">gabriel@kohut.xyz</strong> a hneď to
+        vyriešime.</p>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
