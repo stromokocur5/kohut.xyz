@@ -1,14 +1,18 @@
 {
   "type": "module",
   "scripts": {
-    "build": "$npm_execpath run build:css && hugo",
-    "build:css": "tailwindcss -i app.css -o assets/style.css --minify"
+    "build": "$npm_execpath run build:css && $npm_execpath run build:js && hugo",
+    "build:css": "tailwindcss -i app.css -o assets/style.css --minify",
+    "build:js": "esbuild app.js --bundle --outfile=static/app.js --minify --format=iife",
+    "dev:js": "esbuild app.js --bundle --outfile=static/app.js --format=iife --watch"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.7",
+    "framer-motion": "^12.38.0",
     "tailwindcss": "^4.1.7"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.19"
+    "@tailwindcss/typography": "^0.5.19",
+    "esbuild": "^0.25.0"
   }
 }

@@ -9,20 +9,24 @@
     <meta name="description"
         content="kompletné weby &amp; brand identita pre lokálny biznis. od loga, cez texty, až po spustenie rýchleho webu.">
 
-    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@900,800,700,500,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     {{ $css := resources.Get "style.css" }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+    <script>document.documentElement.classList.add('js')</script>
 </head>
 
 <body class="p-4 lg:p-8 font-sans antialiased text-base lg:text-lg leading-relaxed max-w-[90rem] mx-auto">
 
     {{ block "main" . }}{{ end }}
 
-    <footer class="mt-8 pt-6 pb-2 border-t-2 border-dark flex justify-center items-center text-sm font-semibold">
+    <footer class="mt-8 pt-6 pb-2 border-t-2 border-muted flex justify-center items-center text-sm font-semibold">
         <span>&copy; {{ now.Format "2006" }} gabriel kohut</span>
     </footer>
 
+    <script src="/app.js" defer></script>
 </body>
 
 </html>

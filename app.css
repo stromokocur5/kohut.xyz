@@ -1,24 +1,35 @@
 @import "tailwindcss";
 
 @theme {
-    --color-sunset: #ff553b;
-    --color-shalimar: #fff9bf;
-    --color-dark: #1a1a1a;
+    --color-primary:  #0EA5E9;
+    --color-cta:      #F97316;
+    --color-bg:       #F0F9FF;
+    --color-text:     #0C4A6E;
+    --color-dark:     #0F172A;
+    --color-muted:    #7DD3FC;
+    --color-surface:  #E0F2FE;
 
-    --font-sans: "Cabinet Grotesk", sans-serif;
+    --font-sans:     "Space Grotesk", sans-serif;
+    --font-display:  "Archivo", sans-serif;
 }
 
 /* Base */
 body {
-    background-color: var(--color-shalimar);
-    color: var(--color-dark);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    overflow-x: hidden; /* prevent horizontal scroll from off-screen animations */
+}
+
+/* Display font utility */
+.font-display {
+    font-family: var(--font-display);
 }
 
 /* Bento Cards */
 @layer components {
     .bento-card {
-        border: 2px solid var(--color-dark);
-        background-color: var(--color-shalimar);
+        border: 2px solid var(--color-muted);
+        background-color: #ffffff;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
         border-radius: 1.5rem;
@@ -26,18 +37,18 @@ body {
     }
 
     .bento-card:hover {
-        box-shadow: 6px 6px 0px 0px var(--color-sunset);
+        box-shadow: 6px 6px 0px 0px var(--color-primary);
         transform: translate(-2px, -2px);
     }
 
     .bento-dark {
         background-color: var(--color-dark);
-        color: var(--color-shalimar);
+        color: #ffffff;
         border-color: var(--color-dark);
     }
 
     .bento-dark:hover {
-        box-shadow: 6px 6px 0px 0px var(--color-sunset);
+        box-shadow: 6px 6px 0px 0px var(--color-cta);
     }
 }
 
@@ -47,12 +58,12 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-shalimar);
-    border-left: 1px solid var(--color-dark);
+    background: var(--color-bg);
+    border-left: 1px solid var(--color-muted);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-dark);
+    background: var(--color-primary);
     border-radius: 10px;
 }
 
@@ -69,54 +80,54 @@ body {
     left: 0;
     top: 0;
     font-weight: 900;
-    color: var(--color-sunset);
+    color: var(--color-primary);
 }
 
 /* Selection */
 ::selection {
-    background-color: var(--color-sunset);
-    color: var(--color-shalimar);
+    background-color: var(--color-primary);
+    color: #ffffff;
 }
 
-.bento-dark ::selection,
-.bg-sunset\/10 ::selection {
-    background-color: var(--color-shalimar);
+.bento-dark ::selection {
+    background-color: var(--color-cta);
     color: var(--color-dark);
 }
 
 /* Process Cards */
 .process-card {
-    border: 2px solid var(--color-dark);
+    border: 2px solid var(--color-muted);
     border-radius: 1.5rem;
     padding: 2rem;
-    background-color: var(--color-shalimar);
+    background-color: #ffffff;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
 }
 
 .process-card:hover {
-    box-shadow: 6px 6px 0px 0px var(--color-sunset);
+    box-shadow: 6px 6px 0px 0px var(--color-primary);
     transform: translate(-2px, -2px);
 }
 
 .process-card-final {
     background-color: var(--color-dark);
-    color: var(--color-shalimar);
+    color: #ffffff;
 }
 
 .process-card-final:hover {
-    box-shadow: 6px 6px 0px 0px var(--color-sunset);
+    box-shadow: 6px 6px 0px 0px var(--color-cta);
 }
 
 .process-number {
     font-size: 2rem;
     font-weight: 900;
-    color: var(--color-sunset);
+    font-family: var(--font-display);
+    color: var(--color-primary);
     line-height: 1;
 }
 
 .process-number-final {
-    color: var(--color-shalimar);
+    color: var(--color-cta);
 }
 
 .process-arrow {
@@ -126,8 +137,8 @@ body {
     transform: translateY(-50%);
     width: 32px;
     height: 32px;
-    background-color: var(--color-dark);
-    color: var(--color-shalimar);
+    background-color: var(--color-primary);
+    color: #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -148,21 +159,21 @@ body {
 
 /* FAQ Cards */
 .faq-card {
-    border: 2px solid var(--color-dark);
+    border: 2px solid var(--color-muted);
     border-radius: 1.5rem;
     padding: 1.5rem 2rem;
-    background-color: var(--color-shalimar);
+    background-color: #ffffff;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faq-card:hover {
-    box-shadow: 6px 6px 0px 0px var(--color-sunset);
+    box-shadow: 6px 6px 0px 0px var(--color-primary);
     transform: translate(-2px, -2px);
 }
 
 .faq-card[open] {
     background-color: var(--color-dark);
-    color: var(--color-shalimar);
+    color: #ffffff;
 }
 
 .faq-card .faq-summary {
@@ -178,7 +189,11 @@ body {
 }
 
 .faq-card .faq-summary:hover {
-    color: var(--color-sunset);
+    color: var(--color-primary);
+}
+
+.faq-card[open] .faq-summary:hover {
+    color: var(--color-cta);
 }
 
 .faq-card .faq-summary::-webkit-details-marker {
@@ -188,9 +203,13 @@ body {
 .faq-number {
     font-weight: 900;
     font-size: 1.25rem;
-    color: var(--color-sunset);
+    color: var(--color-primary);
     flex-shrink: 0;
     line-height: 1.4;
+}
+
+.faq-card[open] .faq-number {
+    color: var(--color-cta);
 }
 
 .faq-icon {
@@ -198,7 +217,11 @@ body {
     font-weight: 300;
     transition: transform 0.3s ease;
     flex-shrink: 0;
-    color: var(--color-sunset);
+    color: var(--color-primary);
+}
+
+.faq-card[open] .faq-icon {
+    color: var(--color-cta);
 }
 
 details[open] .faq-icon {
@@ -211,4 +234,32 @@ details[open] .faq-icon {
     font-weight: 500;
     opacity: 0.75;
     line-height: 1.7;
+}
+
+
+/* Pre-hide all animated elements before first paint via .js class */
+
+/* Above fold — page load */
+.js [data-animate='hero-heading'] { opacity: 0; clip-path: inset(0 0 100% 0); transform: translateY(16px); }
+.js [data-animate='hero-text']    { opacity: 0; transform: translateY(8px); }
+
+/* Below fold — scroll triggered */
+.js [data-animate='section-reveal'] { opacity: 0; transform: translateY(24px); }
+.js [data-animate='slide-left']     { opacity: 0; transform: translateX(-36px); }
+.js [data-animate='slide-right']    { opacity: 0; transform: translateX(36px); }
+
+/* Mobile — replace horizontal translations with vertical to avoid overflow */
+@media (max-width: 1023px) {
+    .js [data-animate='slide-left']  { transform: translateY(20px); }
+    .js [data-animate='slide-right'] { transform: translateY(20px); }
+}
+
+/* Reduced motion: everything stays visible */
+@media (prefers-reduced-motion: reduce) {
+    .js [data-animate] {
+        opacity: 1 !important;
+        clip-path: none !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
